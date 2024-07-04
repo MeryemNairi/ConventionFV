@@ -1,3 +1,72 @@
+  /* Le contenu du slide eprogramme */
+  .EpContainer{
+   
+    width: 100%;
+    height: 100%;
+  } 
+
+.carouselContainer {
+  width: 500px;
+  height: 200px;
+  margin: 0 auto;
+
+  .carouselImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+}
+
+
+
+.ImageContainer {
+  width: 70%;
+  height: 200px;
+  background-color: #000000;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.image_holder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Assure que l'image ne dépasse pas les limites du conteneur */
+  position: relative;
+}
+
+.image_holder img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Ajuste l'image sans déformer en conservant son aspect ratio */
+  display: block;
+  margin: auto; /* Centre l'image horizontalement */
+}
+
+
+.Navigation_btn {
+  position: absolute;
+  width: 95%;
+  top: 45%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+.prevBtn, .nextBtn {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  transition: .2s ease;
+}
+
+
+  /* Le contenu ... */
 // Convention.module.scss
 
 h1,
@@ -113,5 +182,5 @@ h6 {
   /* Espacement des lignes pour une meilleure lisibilité */
 }
 .space {
-  margin-bottom: 40px; /* Par exemple, ajustez la marge selon vos besoins */
+  margin-bottom: 50px; /* Par exemple, ajustez la marge selon vos besoins */
 }

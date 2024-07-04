@@ -78,48 +78,68 @@ const HotelsVoyages = () => {
     };
 
     return (
-        <div>
+        <div style={{ marginBottom: '40px' }}>
+            <div style={{ marginBottom: '40px' }}>
+                <h3 style={{ marginBottom: '40px' }}>1. Conventions hôtelières: </h3><br />
+                <div className={styles.buttonsContainer}>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Agadir')}>Agadir</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Marrakech')}>Marrakech</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Fes')}>Fes</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Oujda')}>Oujda</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Tanger')}>Tanger</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Kenitra')}>Kenitra</button>
+                    <button className={styles.cityButton} onClick={() => handleCityChange('Casablanca')}>Casablanca</button>
+                    <button className={styles.cityButton} onClick={() => setSelectedCity('')}>Tous</button>
+                </div>
+                <div className={styles.hotelsContainer}>
+                    {(selectedCity === '' ? Object.values<HotelData[]>(hotelsByCity).flat() : hotelsByCity[selectedCity]).map((hotel: HotelData, index: number) => (
+                        <Hotel key={index} name={hotel.name} stars={hotel.stars} imageUrl={hotel.imageUrl} />
+                    ))}
+                </div>
+                <div className={styles.space}></div>
+            </div>
+            <div style={{ marginBottom: '40px' }}>
+                <h3 >2. Location meublée: Convention de partenariat entre Cnexia et Stay here: </h3><br />
+                <p style={{ marginBottom: '20px' }}>
+                    La convention établie entre CNEXIA et Stay here vise à offrir des réductions aux collaborateurs de CNEXIA pour la location meublée, exclusivement à usage d'habitation.
+                </p>
+
+                <h3>Avantages offerts :</h3><br />
+                <p style={{ marginBottom: '20px' }}>
+                    Les collaborateurs de CNEXIA bénéficient d'une réduction de 20 % par rapport aux prix normaux.
+                </p>
+
+                <h3 style={{ marginBottom: '10px' }}>Tarifs :</h3>
+                <p style={{ marginBottom: '10px' }}>Pour Rabat :</p>
+                <ul style={{ marginBottom: '20px' }}>
+                    <li>Studio 2 : 610 MAD</li>
+                    <li>Appartement sans canapé-lit + Balcon : 3 699 MAD</li>
+                    <li>Appartement avec canapé-lit + Balcon : 4 799 MAD</li>
+                    <li>Penthouse : 4 899 MAD</li>
+                    <li>Appartement 2 chambres : 6 949 MAD</li>
+                    <li>Appartement 3 chambres : 7 249 MAD</li>
+                </ul>
+            </div>
+            <h3>3. Convention de partenariat avec GAZELLES DESTINATION: </h3><br />
             <img
                 className={styles.headerImage}
                 src="https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl('/sites/CnexiaForEveryone/Assets')/Files('Gazel.png')/$value"
                 alt="Gazelles Destination"
             />
-            <div className={styles.space}></div>
-            <div className={styles.headerContent}>
-                <h2 style={{ textAlign: 'center', width: '100%' }}>Partenariat 2022 avec GAZELLES DESTINATION</h2>
-                <div className={styles.space}></div>
+            <p style={{ marginBottom: '20px' }}>
+                CNEXIA et GAZELLES DESTINATION, agence de voyages affiliée à l'IATA, unissent leurs efforts pour offrir des voyages à prix réduits aux employés de CNEXIA.            </p>
 
-                <div style={{ fontSize: '15px', fontWeight: 600 }}>
-                    <p>
-                        Ensemble, CNEXIA et GAZELLES DESTINATION, agence de voyages affiliée à l'IATA, unissent leurs efforts pour offrir
-                        des voyages à prix réduits aux employés de CNEXIA.
-                    </p>
-                    <p>
-                        Tous les employés de CNEXIA peuvent profiter de cette offre en présentant simplement une preuve de leur emploi lors
-                        de la réservation d'un voyage.
-                    </p>
-                    <p>
-                        Pourcentage de Réduction: Les employés de CNEXIA bénéficient d'une réduction immédiate de 5 % sur le prix de base des
-                        voyages organisés par GAZELLES DESTINATION.
-                    </p>
-                </div>
-            </div>
-            <div className={styles.space}></div>
-            <div className={styles.buttonsContainer}>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Agadir')}>Agadir</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Marrakech')}>Marrakech</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Fes')}>Fes</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Oujda')}>Oujda</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Tanger')}>Tanger</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Kenitra')}>Kenitra</button>
-                <button className={styles.cityButton} onClick={() => handleCityChange('Casablanca')}>Casablanca</button>
-                <button className={styles.cityButton} onClick={() => setSelectedCity('')}>Tous</button>
-            </div>
-            <div className={styles.hotelsContainer}>
-                {(selectedCity === '' ? Object.values<HotelData[]>(hotelsByCity).flat() : hotelsByCity[selectedCity]).map((hotel: HotelData, index: number) => (
-                    <Hotel key={index} name={hotel.name} stars={hotel.stars} imageUrl={hotel.imageUrl} />
-                ))}
-            </div>
+            <h3>Avantages offerts :</h3><br />
+            <ul style={{ listStyleType: 'circle', marginLeft: '20px', marginBottom: '20px' }}>
+                <li> -5% de remise immédiate pour tout achat d’un voyage dans un de ses points de ventes. </li>
+                <li>Remise calculée sur le forfait de base du voyage, hors billets d’avions et autres éléments s’ajoutant à la réservation.</li>
+                <li>Remise valable sur des voyages dit à forfait (Packages touristiques, Séjours linguistiques, Réservation d’hôtel au Maroc ou à l’international, Parcs d’attractions, Oumra, Croisières)</li>
+            </ul>
+
+            <h3>Condition :</h3><br />
+            <p style={{ marginBottom: '20px' }}>
+                Présentation du badge professionnel
+            </p>
         </div>
     );
 }
