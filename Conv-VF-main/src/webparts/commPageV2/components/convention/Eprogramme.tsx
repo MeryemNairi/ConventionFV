@@ -74,12 +74,9 @@ const Convention: React.FC = () => {
 
         { name: "DYSON", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'DYSON.png\')/$value' },
 
-        { name: "INFINITON", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'INFINITON.png\')/$value' },
-
         { name: "SteamOne", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'SteamOne.jpg\')/$value' },
 
         { name: "crockpot", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'crockpot.png\')/$value' },
-
 
         { name: "foodsaver", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'foodsaver.jpg\')/$value' },
 
@@ -95,12 +92,10 @@ const Convention: React.FC = () => {
 
         { name: "taurus", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'asus.png\')/$value' },
 
-
         { name: "dercos", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'dercos.png\')/$value' },
 
         { name: "solac", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'solac.png\')/$value' },
 
-        { name: "la-roche-posay", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'la-roche-posay.png\')/$value' },
 
         { name: "mellerware", imageUrl: 'https://cnexia.sharepoint.com/sites/CnexiaForEveryone/_api/web/GetFolderByServerRelativeUrl(\'/sites/CnexiaForEveryone/Assets/Eprogramme\')/Files(\'mellerware.jpg\')/$value' },
 
@@ -108,9 +103,23 @@ const Convention: React.FC = () => {
 
     return (
         <div className={styles.EpContainer}>
+            <a href="https://eProgram.ma"
+                style={{
+                    color: 'blue',
+                    textDecoration: 'underline',
+                    textAlign: 'center',
+                    fontWeight: 'bold',
+                    fontSize: '24px',
+                    display: 'block',
+                    width: '100%',
+                    marginBottom: '40px'
+
+                }}>
+                eProgram.ma
+            </a>
             <h2 style={{ textAlign: 'center' }}>Nos Conventions actives</h2><br />
 
-            <div className={styles.ImageContainer}  style={{ marginBottom: '40px' }}>
+            <div className={styles.ImageContainer} style={{ marginBottom: '40px' }}>
                 <div className={styles.image_holder}>
                     <img src={images.length > 0 ? images[currentIndex].imageUrl : ''} alt="Slide" />
                 </div>
@@ -133,7 +142,7 @@ const Convention: React.FC = () => {
             <div style={{ lineHeight: '1.6' }}>
                 <h3>Définition de la Convention :</h3><br />
                 <p style={{ marginBottom: '20px' }}>La plateforme eProgram.ma regroupe l’ensemble de nos conventions et vous offre  de multiples avantages. Vous allez adorer tout ce que vous y trouverez : une large gamme de produits et de services exclusifs à des prix conventionnés, plus de 50 marques de renom et 30 000 références de produits et services.
-                </p> 
+                </p>
                 <p style={{ marginBottom: '20px' }}>eProgram.ma vous offre une interface conviviale vous permettant de découvrir les conventions et tous les avantages qui vous sont réservés.
                 </p>
 
